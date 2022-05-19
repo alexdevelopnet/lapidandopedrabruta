@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Centro de Recuperação </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+   
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="p-2" >
+                <a class="navbar-brand" href="#">ETERNO APRENDIZ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-2 " id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+
+                        @Html.ActionLink("Início", "Index", "Home", new { @class = "nav-link" })
+                        @Html.ActionLink("Tratamentos", "Tratamentos", "Home", new { @class = "nav-link" })
+                        @Html.ActionLink("Sobre", "Sobre", "Home", new { @class = "nav-link" })
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="bg-secondary p-3">
+            <p class="text-light m-0 text-center">
+                contato:
+                <a class="text-light" href="mailto:lapidandopedrabruta@gmail.com.com.br">lapidandopedrabruta@gmail.com.com.br</a>
+                - <span>&copy; 2022 - ANFSUSAX</span>
+            </p>
+        </footer>
+
+    </div>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
